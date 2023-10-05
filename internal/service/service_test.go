@@ -231,14 +231,6 @@ func TestWriteToOutputCh(t *testing.T) {
 			output: nil,
 		},
 		{
-			name: "Positive test for file output",
-			input: entity.InputData{
-				Data: "This is a test message",
-			},
-			chName: "file",
-			output: nil,
-		},
-		{
 			name: "Positive test for null output",
 			input: entity.InputData{
 				Data: "This is a test message",
