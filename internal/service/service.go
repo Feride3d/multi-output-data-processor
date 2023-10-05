@@ -123,7 +123,7 @@ func (p PipelineService) WriteToOutputCh(ctx context.Context, input entity.Input
 	case "stderr":
 		fmt.Fprintln(os.Stderr, input.Data)
 	case "file":
-		file, err := os.OpenFile("./examples/file.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+		file, err := os.OpenFile("./file.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 		if err != nil {
 			return err
 		}

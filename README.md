@@ -16,7 +16,7 @@ The service accepts JSON input with two key attributes:
 The service processes the `tag` and output the `data` to one or many of the following channels:
 * stdout (standard output)
 * stderr (standard error output)
-* file (writes to a local file named `./examples/file.txt`)
+* file (writes to a local file named `./file.txt`)
 * null (discards the data `/dev/null`)
 
 The choice of the output channel is determined by a configuration defined in a local YAML file. The configuration specifies which tag corresponds to which output channels. For example:
@@ -108,7 +108,7 @@ docker-compose down
 ## Run Unit Tests
 To run unit tests, use the following command in the project directory:
 ```
-go test -race -cover -count 100 ./internal/service
+go test -cover ./internal/service
 ```
 
 ## Example of the request
