@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  backend:
+    image: golang:1.20.4
+    hostname: backend
+    container_name: multi-output-data-processor
+    restart: always
+    ports:
+      - 8080:8080
+    expose: 
+      - 8080
+    networks:
+      - multi-output-data-processor
+    command: "tail -f /dev/null"
+    volumes:
+      - ./:/app
+
+networks:
+  multi-output-data-processor:
+    driver: bridge

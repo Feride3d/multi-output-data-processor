@@ -1,0 +1,15 @@
+http: ":8080"
+conf:
+  - tag: error
+    outputs:
+      - stderr
+      - file
+  - tag: info
+    outputs:
+      - stdout
+  - tag: debug
+    outputs:
+      - file
+  - tag: trace
+    outputs:
+      - "null"
